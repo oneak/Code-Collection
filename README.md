@@ -5,10 +5,10 @@ All scripts are learning-focused and **well-commented** to help with learning an
 
 ## 📂 What's Inside?
 This repository includes a variety of reusable code snippets, such as:
-🛠 Essential utilities – Handy scripts to streamline tasks
-⚙️ Development tools – Code snippets for automation and efficiency
-🎮 Game development assets – Scripts tailored for game creation
-📱 Android & web utilities – Useful tools for mobile and web projects
+- 🛠️ **Essential utilities** – Useful scripts to simplify tasks
+- 💾 **Development scripts** – Code snippets for efficiency and automation
+- 🎮 **Game dev tools** – Scripts tailored for game development
+- 📱 **Android & web tools** – Utilities for mobile and web projects
 
 ## ⚠️ Disclaimer
 All scripts are provided as-is without guarantees or warranties. Keep a safe copy of your original files before you run these scripts. 
