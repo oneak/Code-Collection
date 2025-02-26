@@ -1,3 +1,8 @@
+:: GNU General Public License v2
+:: This script is licensed under the GNU GPL v2
+:: You are free to modify and distribute it under the same license
+:: Credit: Oneak (https://realmmadness.com/oneak)
+
 @echo off
 setlocal enabledelayedexpansion
 
