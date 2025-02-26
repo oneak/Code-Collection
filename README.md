@@ -1,14 +1,18 @@
 # 🚀 Code Collection
 
 Welcome to **Code Collection** – a set of scripts, snippets, and tools designed to make life easier! 🎯  
-All scripts are learning-focused and **well-commented** to help with learning and understanding their functionality 📖✨  
+All scripts are learning-focused and **well-commented** to help with learning and understanding their functionality 📖✨
 
-## 🔥 What's Inside?
-This repository contains a variety of reusable code snippets, including:  
-- 🛠️ **Handy utilities** – Useful scripts to simplify tasks
+## 📂 What's Inside?
+This repository includes a variety of reusable code snippets, such as:
+- 🛠️ **Essential utilities** – Useful scripts to simplify tasks
 - 💾 **Development scripts** – Code snippets for efficiency and automation
 - 🎮 **Game dev tools** – Scripts tailored for game development
 - 📱 **Android & web tools** – Utilities for mobile and web projects
+
+## ⚠️ Disclaimer
+All scripts are provided as-is without guarantees or warranties. Keep a safe copy of your original files before you run these scripts. 
+You need a backup just in case. Proceed with caution and use at your own risk!
 
 ## 📜 License
 This code is licensed under the **GNU General Public License v2.0 (GPLv2)**
