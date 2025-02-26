@@ -1,9 +1,9 @@
-@echo off
 :: GNU GENERAL PUBLIC LICENSE v2
 :: This script is licensed under the GNU GPL v2
 :: You are free to modify and distribute it under the same license
 :: Credit: Oneak (https://realmmadness.com/oneak)
 
+@echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
