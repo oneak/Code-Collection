@@ -1,4 +1,3 @@
-@echo off
 :: ===========================================================
 :: Password Generator
 :: Version: 1.0
@@ -9,6 +8,9 @@
 :: Licensed under the GNU General Public License v2.
 :: ===========================================================
 
+@echo off
+setlocal EnableDelayedExpansion
+
 cls
 title Password Generator
 echo ===========================================================
@@ -17,7 +19,6 @@ echo  Oneak RealmMadness.com
 echo ===========================================================
 echo  Generate random passwords
 echo ===========================================================
-setlocal EnableDelayedExpansion
 
 :GenerateLoop
 set /p length=Enter the length of the password (or type 'exit' to quit): 

@@ -1,4 +1,3 @@
-@echo off
 :: ===========================================================
 :: Random Byte Generator
 :: Version: 1.0
@@ -9,6 +8,9 @@
 :: Licensed under the GNU General Public License v2.
 :: ===========================================================
 
+@echo off
+setlocal enabledelayedexpansion
+
 cls
 title Random Byte Generator
 echo ===========================================================
@@ -17,7 +19,6 @@ echo  Oneak RealmMadness.com
 echo ===========================================================
 echo  Generate random numeric bytes
 echo ===========================================================
-setlocal enabledelayedexpansion
 
 :generate
 set /p num_bytes="Enter the length of the password (or type 'exit' to quit): "
