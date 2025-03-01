@@ -24,4 +24,4 @@ You are free to use, modify, and distribute these scripts, but **you must give c
 ## 🚀 How to Use  
 Simply clone this repository and use the scripts as needed:  
 ```sh
-git clone https://github.com/yourusername/CodeCollection.git
+git clone https://github.com/oneak/Code-Collection.git
