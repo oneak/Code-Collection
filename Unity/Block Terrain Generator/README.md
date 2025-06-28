@@ -35,7 +35,8 @@ Follow these steps to get your block terrain up and running in Unity
 
 3. **Add the Script**  
    - Drag the `BlockTerrainGenerator.cs` script from your project onto the empty GameObject you just created
-   - Assign the `MeshMaterial`
+   - Assign the `Material` in BlockTerrainGenerator Component
+   - Assign `Texture.png` to the material’s Albedo (Base Map)
 
 6. **(Optional) Add Decoration Prefabs**  
    - If you want trees or rocks, create prefabs for them and assign them to the `Tree Prefab` and `Rock Prefab` fields
