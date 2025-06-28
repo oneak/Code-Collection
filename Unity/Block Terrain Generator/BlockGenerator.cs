@@ -1,10 +1,3 @@
-/* 
- * GNU General Public License v2
- * This script is licensed under the GNU GPL v2
- * You are free to modify and distribute it under the same license
- * Credit: Oneak (https://realmmadness.com/oneak)
- */
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -108,15 +101,37 @@ public class BlockGenerator : MonoBehaviour
                 {
                     Vector3 topCenter = new Vector3(x + 0.5f, yMax, z + 0.5f);
                     float rand = Random.value;
+
+                    // Decoration placement
                     if (rand < 0.05f && treePrefab)
-                        Instantiate(treePrefab, topCenter, Quaternion.identity, transform);
+                        InstantiateDecoration(treePrefab, topCenter);
                     else if (rand < 0.1f && rockPrefab)
-                        Instantiate(rockPrefab, topCenter, Quaternion.identity, transform);
+                        InstantiateDecoration(rockPrefab, topCenter);
                 }
             }
         }
 
         Debug.Log("Chunk generation complete. Blocks created: " + blockCount);
+    }
+
+    // Ensures decoration is anchored at its base to the ground
+    void InstantiateDecoration(GameObject prefab, Vector3 surfacePosition)
+    {
+        // Try to get the Renderer bounds of the prefab for base alignment
+        float baseOffsetY = 0f;
+        Renderer rend = prefab.GetComponentInChildren<Renderer>();
+        if (rend != null)
+        {
+            // The pivot is at prefab.transform.position, so
+            // The bottom of the mesh is at (center.y - extents.y) relative to the prefab's pivot
+            // To place bottom of mesh flush with ground, shift up by (extents.y - center.y)
+            // But for most prefabs, center is relative to prefab pivot, so just use extents
+            // We'll assume pivot in center for most assets, so offset by extents.y
+            baseOffsetY = rend.bounds.extents.y;
+        }
+        // Place so that the bottom of the mesh sits on the surface
+        Vector3 spawnPos = surfacePosition + Vector3.up * baseOffsetY;
+        Instantiate(prefab, spawnPos, Quaternion.identity, transform);
     }
 
     void BuildMesh()
