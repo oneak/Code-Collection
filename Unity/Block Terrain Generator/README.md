@@ -50,6 +50,6 @@ Follow these steps to get your block terrain up and running in Unity
 
 ---
 
-**Made with ❤️ by [oneak](https://realmmadness.com/oneak) – part of the [Code Collection](../../README.md)**
+**Made with ❤️ by [Oneak](https://realmmadness.com/oneak) – part of the [Code Collection](../../README.md)**
 
 **License:** [GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
