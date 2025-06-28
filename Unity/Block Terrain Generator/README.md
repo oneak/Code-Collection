@@ -10,7 +10,7 @@ Check it out here: [Procedural Block Terrain in Unity](https://www.patreon.com/p
 
 ## ✨ Features
 - Procedural block terrain generation
-- Built for Unity 6 for maximum compatibility
+- Built for Unity 6 with Universal Render Pipeline (URP) for maximum compatibility
 - Fully commented and beginner-friendly code
 
 ## 🆓 Usage & License
