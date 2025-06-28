@@ -27,11 +27,12 @@ public class BlockTerrainGenerator : MonoBehaviour
 
     [Header("Visuals")]
     public Material blockMaterial;
-
     private bool[,,] blockData;
+    private int blockCount = 0;
+
+    // Noise offsets for random terrain
     private float noiseOffsetX;
     private float noiseOffsetZ;
-    private int blockCount = 0;
 
     // Texture atlas settings (6 faces = 3x2 grid)
     private const int atlasCols = 3;
