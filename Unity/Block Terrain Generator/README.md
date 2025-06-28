@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot.png)
 
-**Block Terrain Generator** is a free, open-source terrain generation tool built in **Unity 6** by [oneak](https://realmmadness.com/oneak).  
+**Block Terrain Generator** is a free, open-source terrain generation tool built in **Unity 6** by [Oneak](https://realmmadness.com/oneak).  
 It lets you quickly create and experiment with block-style environments for your Unity projects, ideal for prototyping
 
 This project is also part of my Unity tutorial post on Patreon. Check it out here: [Procedural Block Terrain in Unity](https://www.patreon.com/posts/procedural-block-132631336?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
