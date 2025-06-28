@@ -30,10 +30,10 @@ Follow these steps to get your block terrain up and running in Unity
 
 2. **Create an Empty GameObject**  
    - In your Unity scene, right-click in the Hierarchy and select **Create Empty** 
-   - Rename it (for example, `BlockGenerator`)
+   - Rename it (for example, `BlockTerrainGenerator`)
 
 3. **Add the Script**  
-   - Drag the `BlockGenerator.cs` script from your project onto the empty GameObject you just created
+   - Drag the `BlockTerrainGenerator.cs` script from your project onto the empty GameObject you just created
    - Assign the `MeshMaterial`
 
 6. **(Optional) Add Decoration Prefabs**  

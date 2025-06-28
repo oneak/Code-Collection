@@ -1,8 +1,15 @@
+/* 
+ * GNU General Public License v2
+ * This script is licensed under the GNU GPL v2
+ * You are free to modify and distribute it under the same license
+ * Credit: Oneak (https://realmmadness.com/oneak)
+ */
+
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
-public class BlockGenerator : MonoBehaviour
+public class BlockTerrainGenerator : MonoBehaviour
 {
     [Header("Chunk Settings")]
     public int width = 16;
@@ -122,11 +129,6 @@ public class BlockGenerator : MonoBehaviour
         Renderer rend = prefab.GetComponentInChildren<Renderer>();
         if (rend != null)
         {
-            // The pivot is at prefab.transform.position, so
-            // The bottom of the mesh is at (center.y - extents.y) relative to the prefab's pivot
-            // To place bottom of mesh flush with ground, shift up by (extents.y - center.y)
-            // But for most prefabs, center is relative to prefab pivot, so just use extents
-            // We'll assume pivot in center for most assets, so offset by extents.y
             baseOffsetY = rend.bounds.extents.y;
         }
         // Place so that the bottom of the mesh sits on the surface
