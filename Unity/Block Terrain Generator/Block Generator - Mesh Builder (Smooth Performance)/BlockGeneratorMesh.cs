@@ -27,11 +27,27 @@ public class BlockGeneratorMesh : MonoBehaviour
 
     [Header("Visuals")]
     public Material blockMaterial;
+    public Camera playerCamera;
 
     private bool[,,] blockData;
     private float noiseOffsetX;
     private float noiseOffsetZ;
     private int blockCount = 0;
+
+    // Texture atlas settings (6 faces = 3x2 grid)
+    private const int atlasCols = 3;
+    private const int atlasRows = 2;
+
+    // Face order in CubeMeshData: Right, Left, Top, Bottom, Front, Back
+    // Desired atlas order: 0=Top, 1=Right, 2=Left, 3=Front, 4=Back, 5=Bottom
+    private static readonly int[] faceAtlasIndex = {
+        1, // Right  → atlas 1
+        2, // Left   → atlas 2
+        0, // Top    → atlas 0
+        5, // Bottom → atlas 5
+        3, // Front  → atlas 3
+        4  // Back   → atlas 4
+    };
 
     void Start()
     {
@@ -41,6 +57,9 @@ public class BlockGeneratorMesh : MonoBehaviour
 
         if (blockMaterial)
             GetComponent<MeshRenderer>().material = blockMaterial;
+
+        if (playerCamera == null)
+            playerCamera = Camera.main;
 
         SpawnPlayer();
     }
@@ -72,8 +91,6 @@ public class BlockGeneratorMesh : MonoBehaviour
         }
 
         blockData = new bool[width, height, depth];
-
-        // Reset the counter
         blockCount = 0;
 
         for (int x = 0; x < width; x++)
@@ -174,10 +191,21 @@ public class BlockGeneratorMesh : MonoBehaviour
         tris.Add(baseIndex + 2);
         tris.Add(baseIndex + 3);
 
-        uvs.Add(new Vector2(0, 0));
-        uvs.Add(new Vector2(0, 1));
-        uvs.Add(new Vector2(1, 1));
-        uvs.Add(new Vector2(1, 0));
+        // Assign UVs so this face uses its region in the atlas
+        int atlasIdx = faceAtlasIndex[face];
+        int col = atlasIdx % atlasCols;
+        int row = atlasIdx / atlasCols;
+
+        float uMin = (float)col / atlasCols;
+        float vMin = 1.0f - ((float)(row + 1) / atlasRows);
+        float uMax = uMin + (1.0f / atlasCols);
+        float vMax = vMin + (1.0f / atlasRows);
+
+        // Bottom-left, Top-left, Top-right, Bottom-right (match verts order)
+        uvs.Add(new Vector2(uMin, vMin));
+        uvs.Add(new Vector2(uMin, vMax));
+        uvs.Add(new Vector2(uMax, vMax));
+        uvs.Add(new Vector2(uMax, vMin));
     }
 
     void SpawnPlayer()
@@ -198,11 +226,11 @@ public class BlockGeneratorMesh : MonoBehaviour
     }
 
     private static readonly Vector3Int[] faceChecks = {
-        new Vector3Int(1, 0, 0),
-        new Vector3Int(-1, 0, 0),
-        new Vector3Int(0, 1, 0),
-        new Vector3Int(0, -1, 0),
-        new Vector3Int(0, 0, 1),
-        new Vector3Int(0, 0, -1)
+        new Vector3Int(1, 0, 0),    // Right
+        new Vector3Int(-1, 0, 0),   // Left
+        new Vector3Int(0, 1, 0),    // Top
+        new Vector3Int(0, -1, 0),   // Bottom
+        new Vector3Int(0, 0, 1),    // Front
+        new Vector3Int(0, 0, -1)    // Back
     };
 }
