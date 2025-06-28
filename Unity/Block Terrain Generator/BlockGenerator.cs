@@ -27,7 +27,6 @@ public class BlockGenerator : MonoBehaviour
 
     [Header("Visuals")]
     public Material blockMaterial;
-    public Camera playerCamera;
 
     private bool[,,] blockData;
     private float noiseOffsetX;
@@ -57,9 +56,6 @@ public class BlockGenerator : MonoBehaviour
 
         if (blockMaterial)
             GetComponent<MeshRenderer>().material = blockMaterial;
-
-        if (playerCamera == null)
-            playerCamera = Camera.main;
 
         SpawnPlayer();
     }
