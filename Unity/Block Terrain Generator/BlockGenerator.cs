@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
-public class BlockGeneratorMesh : MonoBehaviour
+public class BlockGenerator : MonoBehaviour
 {
     [Header("Chunk Settings")]
     public int width = 16;

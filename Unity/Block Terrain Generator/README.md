@@ -34,17 +34,7 @@ Follow these steps to get your block terrain up and running in Unity
 
 3. **Add the Script**  
    - Drag the `BlockGenerator.cs` script from your project onto the empty GameObject you just created
-
-4. **Create a Cube Prefab**  
-   - In the Project window, right-click and select **Create > 3D Object > Cube**
-   - Adjust its size and appearance as desired
-   - Drag the cube from the Hierarchy into your Project window to make it a prefab (e.g., name it `BlockPrefab`)
-   - Delete the original cube from your scene to keep things tidy
-
-5. **Assign the Prefab to the Script**  
-   - Select your `BlockGenerator` GameObject
-   - In the Inspector, find the `Block Prefab` field on the script component
-   - Drag your `BlockPrefab` prefab into this field
+   - Assign the `MeshMaterial`
 
 6. **(Optional) Add Decoration Prefabs**  
    - If you want trees or rocks, create prefabs for them and assign them to the `Tree Prefab` and `Rock Prefab` fields
