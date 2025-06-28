@@ -1,6 +1,7 @@
 # 🚀 Code Collection
 
-Welcome to **Code Collection** – a set of scripts, snippets, and tools designed to make life easier! 🎯  
+Welcome to **Code Collection**  
+A curated set of scripts, snippets, and tools crafted to simplify your workflow 🎯  
 All scripts are learning-focused and **well-commented** to help with learning and understanding their functionality 📖✨
 
 ## 📂 What's Inside?
