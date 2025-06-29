@@ -1,4 +1,4 @@
-/* 
+/*
  * GNU General Public License v2
  * This script is licensed under the GNU GPL v2
  * You are free to modify and distribute it under the same license
@@ -87,6 +87,11 @@ public class BlockTerrainGenerator : MonoBehaviour
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
 
+        // Prevent zero or negative sizes
+        width = Mathf.Max(1, width);
+        height = Mathf.Max(1, height);
+        depth = Mathf.Max(1, depth);
+
         blockData = new bool[width, height, depth];
         blockCount = 0;
 
@@ -94,12 +99,17 @@ public class BlockTerrainGenerator : MonoBehaviour
         {
             for (int z = 0; z < depth; z++)
             {
-                float yMax = Mathf.FloorToInt(Mathf.PerlinNoise(
+                // Calculate max height, never exceeding array bound
+                int yMax = Mathf.FloorToInt(Mathf.PerlinNoise(
                     (x * noiseScale) + noiseOffsetX,
                     (z * noiseScale) + noiseOffsetZ
                 ) * height);
 
-                for (int y = 0; y < yMax; y++)
+                // Clamp yMax to less than height, never height or above
+                yMax = Mathf.Clamp(yMax, 0, height);
+
+                // Loop from 0 to yMax-1, but never more than height-1
+                for (int y = 0; y < yMax && y < height; y++)
                 {
                     blockData[x, y, z] = true;
                     blockCount++;
@@ -226,12 +236,14 @@ public class BlockTerrainGenerator : MonoBehaviour
     {
         int spawnX = width / 2;
         int spawnZ = depth / 2;
-        float yMax = Mathf.FloorToInt(Mathf.PerlinNoise(
+        int yMax = Mathf.FloorToInt(Mathf.PerlinNoise(
             (spawnX * noiseScale) + noiseOffsetX,
             (spawnZ * noiseScale) + noiseOffsetZ
         ) * height);
+        yMax = Mathf.Clamp(yMax, 0, height);
 
         Vector3 spawnPos = new Vector3(spawnX, yMax + 1, spawnZ);
+
         if (currentPlayer)
             Destroy(currentPlayer.gameObject);
 
