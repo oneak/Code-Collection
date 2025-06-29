@@ -7,7 +7,7 @@ It lets you quickly create and experiment with block-style environments for your
 
 This project is also part of my Unity tutorial post on Patreon. Check it out here: [Procedural Block Terrain in Unity](https://www.patreon.com/posts/procedural-block-132631336?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
 
-Want to generate texture atlases with Python? Grab the script from my repo: [Generate Texture Atlas](https://github.com/oneak/Code-Collection/tree/main/Python/Generate%20Texture%20Atlas)
+Want to generate texture atlases with Python? Grab the script from my repo: [Texture Atlas Generator](https://github.com/oneak/Code-Collection/tree/main/Python/Generators/Texture%20Atlas%20Generator)
 
 ## ✨ Features
 - Procedural block terrain generation
