@@ -8,7 +8,7 @@ It lets you quickly create and experiment with block-style environments for your
 ## ✨ Features
 - Procedural block terrain generation
 - Unity 6 + URP compatible
-- Fully commented and beginner-friendly code
+- Commented and beginner-friendly code
 
 ## 🎁 Full-Featured Version for Patrons
 A more advanced version is available for Patreon supporters. It includes a Unity Package with:
