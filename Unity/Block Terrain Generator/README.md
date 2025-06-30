@@ -42,13 +42,17 @@ Follow these steps to get your block terrain up and running in Unity
    - Assign the `Material` in BlockTerrainGenerator Component
    - Assign `Texture.png` to the material’s Albedo (Base Map)
 
-6. **(Optional) Add Decoration Prefabs**  
+4. **(Optional) Add Decoration Prefabs**  
    - If you want trees or rocks, create prefabs for them and assign them to the `Tree Prefab` and `Rock Prefab` fields
 
-7. **(Optional) Add a Player**  
+5. **(Optional) Add a Player**  
    - Assign a player prefab to the `Player Prefab` field, or leave it empty for a terrain-only scene
 
-8. **Play!**  
+6. (Optional) Quick Start
+   - Import the provided .unitypackage
+   - Open the scene: Block Terrain Generator
+
+7. **Play!**  
    - Hit the **Play** button in Unity
    - The script will generate a blocky terrain based on your settings
    - Press `R` to generate terrain again
