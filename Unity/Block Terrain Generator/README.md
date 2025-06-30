@@ -13,7 +13,7 @@ It lets you quickly create and experiment with block-style environments for your
 ## 🎁 Full-Featured Version for Patrons
 A more advanced version is available for Patreon supporters. It includes a Unity Package with:
 - Runtime GUI (terrain size, noise, water, seed)  
-- Save & load world codes  
+- Use World Codes to save and load terrain setups  
 - Infinite terrain with adjustable chunk loading
 
 **Realm Madness Patreon Tutorial:** [Procedural Block Terrain in Unity](https://www.patreon.com/posts/procedural-block-132631336)
