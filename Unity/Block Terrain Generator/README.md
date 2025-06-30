@@ -18,8 +18,6 @@ A more advanced version is available for Patreon supporters. It includes a Unity
 
 Check it out here [Procedural Block Terrain in Unity](https://www.patreon.com/posts/procedural-block-132631336?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
 
-Want to generate texture atlases with Python? Grab the script from my repo: [Texture Atlas Generator](https://github.com/oneak/Code-Collection/tree/main/Python/Generators/Texture%20Atlas%20Generator)
-
 ## 🆓 Usage & License
 
 You are **free to use, modify, and improve** this terrain generator in any way you like.  
@@ -56,6 +54,8 @@ Follow these steps to get your block terrain up and running in Unity
    - Press `R` to generate terrain again
 
 ---
+
+Want to generate texture atlases with Python? Grab the script from my repo: [Texture Atlas Generator](https://github.com/oneak/Code-Collection/tree/main/Python/Generators/Texture%20Atlas%20Generator)
 
 **Made with ❤️ by [Oneak](https://realmmadness.com/oneak) – part of the [Code Collection](../../README.md)**
 
