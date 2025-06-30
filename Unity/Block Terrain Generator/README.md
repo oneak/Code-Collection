@@ -9,7 +9,7 @@ It lets you quickly create and experiment with block-style environments for your
 - Procedural block terrain generation
 - Built for Unity 6 with Universal Render Pipeline (URP) for maximum compatibility
 - Fully commented and beginner-friendly code
-- 
+
 ## 🎁 Full-Featured Version for Patrons
 A more advanced version is available for Patreon supporters. It includes a Unity Package with:
 - Runtime GUI (terrain size, noise, water, seed)  
