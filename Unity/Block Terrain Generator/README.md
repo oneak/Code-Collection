@@ -5,7 +5,11 @@
 **Block Terrain Generator** is a free, open-source terrain generation tool built in **Unity 6** by [Oneak](https://realmmadness.com/oneak).  
 It lets you quickly create and experiment with block-style environments for your Unity projects, ideal for prototyping
 
-🎁 This project is also part of my Unity tutorial post on Patreon, with a Unity Package included for subscribers.
+✨ This project also has a full-featured version for supporters on Patreon
+🧩 Includes Unity Package with:
+🎛️ GUI terrain controls (size, noise, water, seed)
+💾 Save/load world codes
+🌍 Infinite chunk generation with adjustable render distance
 Check it out here [Procedural Block Terrain in Unity](https://www.patreon.com/posts/procedural-block-132631336?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
 
 Want to generate texture atlases with Python? Grab the script from my repo: [Texture Atlas Generator](https://github.com/oneak/Code-Collection/tree/main/Python/Generators/Texture%20Atlas%20Generator)
