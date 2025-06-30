@@ -48,7 +48,7 @@ Follow these steps to get your block terrain up and running in Unity
 5. **(Optional) Add a Player**  
    - Assign a player prefab to the `Player Prefab` field, or leave it empty for a terrain-only scene
 
-6. (Optional) Quick Start
+6. **(Optional) Quick Start**
    - Import the provided .unitypackage
    - Open the scene: Block Terrain Generator
 
