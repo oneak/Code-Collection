@@ -7,7 +7,7 @@ It lets you quickly create and experiment with block-style environments for your
 
 ## ✨ Features
 - Procedural block terrain generation
-- Built for Unity 6 with Universal Render Pipeline (URP) for maximum compatibility
+- Unity 6 + URP compatible
 - Fully commented and beginner-friendly code
 
 ## 🎁 Full-Featured Version for Patrons
